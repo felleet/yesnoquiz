@@ -4,12 +4,20 @@ import java.util.Objects;
 
 public class Question {
 
-    private final String question;
+    private final String text;
     private final Answer answer;
 
-    public Question(String question, Answer answer) {
-        this.question = question;
+    public Question(String text, Answer answer) {
+        this.text = text;
         this.answer = answer;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public Answer getAnswer() {
+        return answer;
     }
 
     @Override
@@ -17,18 +25,18 @@ public class Question {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Question question1 = (Question) o;
-        return Objects.equals(question, question1.question) && answer == question1.answer;
+        return Objects.equals(text, question1.text) && answer == question1.answer;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(question, answer);
+        return Objects.hash(text, answer);
     }
 
     @Override
     public String toString() {
         return "Question{" +
-                "question='" + question + '\'' +
+                "text='" + text + '\'' +
                 ", answer=" + answer +
                 '}';
     }
