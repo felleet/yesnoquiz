@@ -3,6 +3,7 @@ package ru.quizgames.yesnoquiz;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.text.Font;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -17,6 +18,12 @@ public class QuizController {
     private int correctAnswersCounter;
     private FinishQuizCallback finishQuizCallback;
     private int total;
+
+    @FXML
+    public void initialize() {
+        questionText.setFont(new Font("Arial", 30));
+        questionText.setWrapText(true);
+    }
 
     public void start(List<Question> questions) {
         correctAnswersCounter = 0;

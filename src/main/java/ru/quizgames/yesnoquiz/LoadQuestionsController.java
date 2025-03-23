@@ -3,6 +3,7 @@ package ru.quizgames.yesnoquiz;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Window;
@@ -16,8 +17,6 @@ public class LoadQuestionsController {
     @FXML
     public Button startButton;
     @FXML
-    public Button loadButton;
-    @FXML
     private Label welcomeText;
     FileChooser fileChooser = new FileChooser();
     private Window primaryStage;
@@ -28,6 +27,7 @@ public class LoadQuestionsController {
     private void initialize() {
         startButton.setDisable(questions.isEmpty());
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV files", "*.csv"));
+        welcomeText.setFont(new Font("Arial", 30));
     }
 
     @FXML
