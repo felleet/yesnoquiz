@@ -15,9 +15,12 @@ public class QuizController {
     private Question currentQuestion;
 
     private int correctAnswersCounter;
+    private FinishQuizCallback finishQuizCallback;
+    private int total;
 
     public void start(List<Question> questions) {
         correctAnswersCounter = 0;
+        total = questions.size();
         iterator = new ArrayList<>(questions).iterator();
         nextQuestion();
     }
@@ -29,6 +32,7 @@ public class QuizController {
             System.out.println("Question: '" + currentQuestion.getText() + "' Answer: " + currentQuestion.getAnswer());
         } else {
             System.out.println("Questions finished");
+            finishQuizCallback.onFinish(correctAnswersCounter, total);
         }
     }
 
@@ -50,5 +54,9 @@ public class QuizController {
             System.out.println("Wrong answer. Correct is NO");
         }
         nextQuestion();
+    }
+
+    public void setFinishCallback(FinishQuizCallback finishQuizCallback) {
+        this.finishQuizCallback = finishQuizCallback;
     }
 }

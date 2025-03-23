@@ -34,15 +34,18 @@ public class LoadQuestionsController {
     protected void onLoadQuestionsButtonClick() {
         File selectedFile = fileChooser.showOpenDialog(primaryStage);
         System.out.printf("File selected: %s%n", selectedFile);
-        try {
-            questions = new QuestionsParser().parse(selectedFile.toPath());
-            System.out.println("Loaded questions: " + questions);
-            welcomeText.setText("Загружено вопросов: " + questions.size());
-            startButton.setDisable(questions.isEmpty());
-        } catch (IOException e) {
-            System.out.println("Failed to load questions: " + e);
-            welcomeText.setText("Ошибка при загрузке вопросов.");
+        if (selectedFile != null) {
+            try {
+                questions = new QuestionsParser().parse(selectedFile.toPath());
+                System.out.println("Loaded questions: " + questions);
+                welcomeText.setText("Загружено вопросов: " + questions.size());
+            } catch (Exception e) {
+                questions = new ArrayList<>();
+                System.out.println("Failed to load questions: " + e);
+                welcomeText.setText("Ошибка при загрузке вопросов.");
+            }
         }
+        startButton.setDisable(questions.isEmpty());
     }
 
     public void onStartButtonClick() {
@@ -60,5 +63,9 @@ public class LoadQuestionsController {
 
     public void setOnStartCallback(StartQuizCallback startQuizCallback) {
         this.startQuizCallback = startQuizCallback;
+    }
+
+    public void setQuizResults(int correct, int total) {
+        welcomeText.setText("Результат: правильных ответов " + correct + " / " + total);
     }
 }
