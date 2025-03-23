@@ -1,4 +1,4 @@
-package ru.quizegames.yesnoquiz;
+package ru.quizgames.yesnoquiz;
 
 import org.junit.jupiter.api.Test;
 
@@ -7,8 +7,8 @@ import java.nio.file.Paths;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static ru.quizegames.yesnoquiz.Answer.NO;
-import static ru.quizegames.yesnoquiz.Answer.YES;
+import static ru.quizgames.yesnoquiz.Answer.NO;
+import static ru.quizgames.yesnoquiz.Answer.YES;
 
 class QuestionsParserTest {
 

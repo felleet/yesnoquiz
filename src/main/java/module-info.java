@@ -4,6 +4,6 @@ module ru.yesnoquiz.yesnoquiz {
 
     requires org.controlsfx.controls;
 
-    opens ru.quizegames.yesnoquiz to javafx.fxml;
-    exports ru.quizegames.yesnoquiz;
+    opens ru.quizgames.yesnoquiz to javafx.fxml;
+    exports ru.quizgames.yesnoquiz;
 }

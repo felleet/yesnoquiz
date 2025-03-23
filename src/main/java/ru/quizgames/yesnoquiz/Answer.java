@@ -1,4 +1,4 @@
-package ru.quizegames.yesnoquiz;
+package ru.quizgames.yesnoquiz;
 
 public enum Answer {
 

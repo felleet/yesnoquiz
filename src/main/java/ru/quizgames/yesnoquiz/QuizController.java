@@ -1,9 +1,9 @@
-package ru.quizegames.yesnoquiz;
+package ru.quizgames.yesnoquiz;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class QuizController {
     @FXML
     private Label welcomeText;
 

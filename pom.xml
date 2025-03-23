@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ru.quizegames</groupId>
+    <groupId>ru.quizgames</groupId>
     <artifactId>yesnoquiz</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>yesnoquiz</name>
@@ -64,7 +64,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>ru.yesnoquiz.yesnoquiz/ru.quizegames.yesnoquiz.HelloApplication</mainClass>
+                            <mainClass>ru.yesnoquiz.yesnoquiz/ru.quizgames.yesnoquiz.HelloApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
