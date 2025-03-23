@@ -28,7 +28,7 @@ public class QuizController {
     private void nextQuestion() {
         if (iterator.hasNext()) {
             currentQuestion = iterator.next();
-            questionText.setText(currentQuestion.getText());
+            questionText.setText(currentQuestion.getText() + "?");
             System.out.println("Question: '" + currentQuestion.getText() + "' Answer: " + currentQuestion.getAnswer());
         } else {
             System.out.println("Questions finished");
