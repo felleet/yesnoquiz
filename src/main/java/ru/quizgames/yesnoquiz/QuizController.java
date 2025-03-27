@@ -28,7 +28,7 @@ public class QuizController {
     public void start(List<Question> questions) {
         correctAnswersCounter = 0;
         total = questions.size();
-        iterator = new ArrayList<>(questions).iterator();
+        iterator = questions.iterator();
         nextQuestion();
     }
 
