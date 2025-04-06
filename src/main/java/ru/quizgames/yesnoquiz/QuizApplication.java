@@ -44,7 +44,7 @@ public class QuizApplication extends Application {
             }
         });
 
-        stage.setTitle("Викторина");
+        stage.setTitle("Игра");
         stage.setScene(scene);
         stage.show();
     }

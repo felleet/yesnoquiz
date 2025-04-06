@@ -6,7 +6,7 @@
 
     <groupId>ru.quizgames</groupId>
     <artifactId>yesnoquiz</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <name>yesnoquiz</name>
 
     <properties>
